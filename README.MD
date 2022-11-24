@@ -27,3 +27,16 @@ hex string with either form specifying the initial balance in wei.
 
 -u  Array of addresses or address indexes specifying which accounts should be unlocked.
 ```
+
+## ERC20
+
+`ERC20.sol` and `IERC20.sol` from https://github.com/OpenZeppelin/openzeppelin-contracts/blob/24a0bc23cfe3fbc76f8f2510b78af1e948ae6651/contracts/token/ERC20/ (22.02.2021, 19:44).
+
+Differences:
+
+1. `import "../../utils/Context.sol";` removed;
+  all `_msgSender()` replaced by `msg.sender`;
+
+2. `pragma solidity ^0.7.4;` instead of `pragma solidity ^0.8.0;`;
+
+3. minor differences in comments;
