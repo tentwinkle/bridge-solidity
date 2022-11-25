@@ -30,7 +30,7 @@ hex string with either form specifying the initial balance in wei.
 
 ## ERC20
 
-`ERC20.sol` and `IERC20.sol` from https://github.com/OpenZeppelin/openzeppelin-contracts/blob/24a0bc23cfe3fbc76f8f2510b78af1e948ae6651/contracts/token/ERC20/ (22.02.2021, 19:44).
+`ERC20.sol` and `IERC20.sol` from https://github.com/OpenZeppelin/openzeppelin-contracts/blob/24a0bc23cfe3fbc76f8f2510b78af1e948ae6651/contracts/token/ERC20/ (master branch, 22.02.2021, 19:44).
 
 Differences:
 
