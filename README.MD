@@ -28,6 +28,38 @@ hex string with either form specifying the initial balance in wei.
 -u  Array of addresses or address indexes specifying which accounts should be unlocked.
 ```
 
+## Deploy
+
+Change HDWalletProvider mnemonic and endpoint in `truffle-cofnig.js`.
+
+You can get Ethereum Mainnet/Testent endpoints for example in https://infura.io.
+
+You can get BSC Mainnet/Testnet endpoints in https://docs.bnbchain.org/docs/rpc/.
+
+Ethereum Goerli Testnet:
+
+```bash
+truffle deploy --network goerli
+```
+
+BSC Testnet:
+
+```bash
+truffle deploy --network bsc_testnet
+```
+
+Ethereum Mainnet:
+
+```bash
+truffle deploy --network eth_mainnet
+```
+
+BSC Mainent:
+
+```bash
+truffle deploy --network bsc_mainnet
+```
+
 ## ERC20
 
 `ERC20.sol` and `IERC20.sol` from https://github.com/OpenZeppelin/openzeppelin-contracts/blob/24a0bc23cfe3fbc76f8f2510b78af1e948ae6651/contracts/token/ERC20/ (master branch, 22.02.2021, 19:44).

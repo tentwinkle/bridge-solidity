@@ -20,27 +20,51 @@ module.exports = {
       network_id: "*",
       gas: 6721975,
     },
-    ropsten: {
+    goerli: {
       provider: () => {
         return new HDWalletProvider(
-          ``, //mnemonic
-          ``, //endpoint
+          `uphold wide shed another couch focus hidden soup lazy top salon salute`, //mnemonic
+          `https://goerli.infura.io/v3/<API_KEY>`, //endpoint
           0, 20
         );
       },
-      network_id: "3",
+      network_id: "5",
       gasPrice: 25e9,
       gas: 6721975,
     },
-    mainnet: {
+    bsc_testnet: {
+      provider: () => {
+        return new HDWalletProvider(
+          `uphold wide shed another couch focus hidden soup lazy top salon salute`, //mnemonic
+          `https://data-seed-prebsc-1-s1.binance.org:8545`, //endpoint
+          0, 20
+        );
+      },
+      network_id: "97",
+      gasPrice: 25e9,
+      gas: 6721975,
+    },
+    eth_mainnet: {
       provider: () => {
         return new HDWalletProvider(
           ``, //mnemonic
-          ``, //endpoint
+          `https://mainnet.infura.io/v3/<API_KEY>`, //endpoint
            0, 20
         );
       },
       network_id: "1",
+      gasPrice: 25e9,
+      gas: 6721975,
+    },
+    bsc_mainnet: {
+      provider: () => {
+        return new HDWalletProvider(
+          ``, //mnemonic
+          `https://bsc-dataseed.binance.org`, //endpoint
+           0, 20
+        );
+      },
+      network_id: "56",
       gasPrice: 25e9,
       gas: 6721975,
     }
