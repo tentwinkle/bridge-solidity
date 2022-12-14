@@ -48,6 +48,18 @@ abstract contract WrappedTON is ERC20, TonUtils {
         return 9;
     }
 
-    event SwapEthToTon(address indexed from, int8 to_wc, bytes32 indexed to_addr_hash, uint256 value);
-    event SwapTonToEth(int8 workchain, bytes32 indexed ton_address_hash, bytes32 indexed ton_tx_hash, uint64 lt, address indexed to, uint256 value);
+    event SwapEthToTon(
+        address indexed from, // sender user EVM-network
+        int8 to_wc, // workchain of receiver user in TON-network
+        bytes32 indexed to_addr_hash, // // address of receiver user in TON-network
+        uint256 value // amount in nanotons
+    );
+    event SwapTonToEth(
+        int8 workchain, // sender user workchain in TON network
+        bytes32 indexed ton_address_hash, // sender user address in TON network
+        bytes32 indexed ton_tx_hash, // transaction hash on TON bridge smart contract
+        uint64 lt, // transaction LT (logical time) on TON bridge smart contract
+        address indexed to, // user's EVM-address to receive wrapped TONs
+        uint256 value // nanotons amount to receive in EVM-network
+    );
 }
