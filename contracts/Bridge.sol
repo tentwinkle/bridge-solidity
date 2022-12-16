@@ -17,6 +17,8 @@ contract Bridge is SignatureChecker, BridgeInterface, WrappedTON {
     }
     
     function generalVote(bytes32 digest, Signature[] memory signatures) internal {
+      // NOTE: In practice, the number of oracles should be chosen to be divisible by 3.
+      // In other cases minimum consensus is `floor( 2 * oracles_count / 3 )`. For example, with 4 oracles only 2 signatures required.
       require(signatures.length >= 2 * oraclesSet.length / 3, "Not enough signatures");
       require(!finishedVotings[digest], "Vote is already finished");
       uint signum = signatures.length;
