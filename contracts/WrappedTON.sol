@@ -27,7 +27,7 @@ abstract contract WrappedTON is ERC20, TonUtils {
 
     /**
      * @dev Destroys `amount` tokens from `account`, deducting from the caller's
-     * allowance and request transder to `addr`
+     * allowance and request transfer to `addr`
      *
      * See {ERC20-_burn} and {ERC20-allowance}.
      *

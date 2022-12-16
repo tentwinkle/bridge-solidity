@@ -30,6 +30,8 @@ hex string with either form specifying the initial balance in wei.
 
 ## Deploy
 
+> ⚠️ Don't deploy bridge smart contracts with same addresses and same oracle set in different EVM networks to prevent replay attack (`chainId` not included in signing data).
+
 Change HDWalletProvider mnemonic and endpoint in `truffle-cofnig.js`.
 
 You can get Ethereum Mainnet/Testent endpoints for example in https://infura.io.
