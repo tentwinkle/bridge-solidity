@@ -32,6 +32,11 @@ hex string with either form specifying the initial balance in wei.
 
 > ⚠️ Don't deploy bridge smart contracts with same addresses and same oracle set in different EVM networks to prevent replay attack (`chainId` not included in signing data).
 
+> ⚠️ Oracle's address [can't](https://github.com/ton-blockchain/bridge-solidity/blob/290f1be610f23ad3f700e06aebd92b71ccf6af70/contracts/SignatureChecker.sol#L43) be zero.
+
+> ⚠️ NOTE: In practice, the number of oracles should be chosen to be divisible by 3.
+> Note that in other cases minimum consensus is `floor( 2 * oracles_count / 3 )`. For example, with 4 oracles only 2 signatures required.
+
 Change HDWalletProvider mnemonic and endpoint in `truffle-cofnig.js`.
 
 You can get Ethereum Mainnet/Testent endpoints for example in https://infura.io.
