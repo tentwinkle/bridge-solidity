@@ -39,6 +39,8 @@ contract SignatureChecker is TonUtils {
           }
           bytes memory prefix = "\x19Ethereum Signed Message:\n32";
           bytes32 prefixedHash = keccak256(abi.encodePacked(prefix, digest));
+
+          // WARNING: The `ecrecover` function returns zero on failure, so if sig.signer == 0 then any signature will be accepted regardless of whether it is cryptographically valid.
           require(ecrecover(prefixedHash, v, r, s) == sig.signer, "Wrong signature");
     }
 
