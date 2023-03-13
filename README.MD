@@ -28,6 +28,8 @@ hex string with either form specifying the initial balance in wei.
 -u  Array of addresses or address indexes specifying which accounts should be unlocked.
 ```
 
+⚠️ It looks like different versions of `ganache` sign data in different ways (parameter `v`), so you may need to comment/uncomment [utils.js#L41](https://github.com/ton-blockchain/bridge-solidity/blob/master/test/utils/utils.js#L41).
+
 ## Deploy
 
 > ⚠️ Don't deploy bridge smart contracts with same addresses and same oracle set in different EVM networks to prevent replay attack (`chainId` not included in signing data).
